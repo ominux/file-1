@@ -1,0 +1,8 @@
+./data_arrange.pl ./data/result_45hp.mat ./data_out/result_45hp.mat
+./data_arrange.pl ./data/result_45lp.mat ./data_out/result_45lp.mat
+./data_arrange.pl ./data/result_32hp.mat ./data_out/result_32hp.mat
+./data_arrange.pl ./data/result_32lp.mat ./data_out/result_32lp.mat
+./data_arrange.pl ./data/result_22hp.mat ./data_out/result_22hp.mat
+./data_arrange.pl ./data/result_22lp.mat ./data_out/result_22lp.mat
+./data_arrange.pl ./data/result_16hp.mat ./data_out/result_16hp.mat
+./data_arrange.pl ./data/result_16lp.mat ./data_out/result_16lp.mat

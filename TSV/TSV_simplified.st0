@@ -1,0 +1,355 @@
+***** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) linux ******
+ Input File: TSV_simplified.sp
+ lic:
+ lic: FLEXlm: v8.5b
+ lic: USER:   jzx105               HOSTNAME: tsinghua.cse.psu.edu
+ lic: HOSTID: 0011430ccdd1         PID:      29392
+ lic: Using FLEXlm license file:
+ lic: 1700@telperion.cse.psu.edu
+ lic: Checkout 1 hspice
+ lic: License/Maintenance for hspice will expire on 19-oct-2011/2010.03
+ lic: FLOATING license(s) on SERVER telperion.cse.psu.edu
+ lic:
+ Init: hspice initialization file: /home/software/synopsys-2008/hspice/hspice/hs
+ init: begin read circuit files,  cpu clock=  0.00E+00
+       option artist   =     2.00
+       option ingold   =     2.00
+       option measou   =     1.00
+       option psf      =     2.00
+       option method   = gear
+       option autost   =     0.00
+       option runlvl   =     2.00
+       option post
+ init: end read circuit files,  cpu clock=  1.00E-02 memory=    145 kb
+ init: begin check errors,  cpu clock=  1.00E-02
+ **warning**  no dc path to ground from node        3:                net2
+ init: end check errors,  cpu clock=  1.00E-02 memory=    147 kb
+ init: begin setup matrix, pivot=    10 cpu clock=  1.00E-02
+       establish matrix -- done,  cpu clock=  1.00E-02 memory=    152 kb
+       re-order matrix -- done,  cpu clock=  1.00E-02 memory=    153 kb
+ init: end setup matrix,  cpu clock=  1.00E-02 memory=    165 kb
+ sweep: parameter       parameter1       begin, #sweeps =  20
+ parameter: inv_w_n         =    2.00E-08
+ dcop: begin dcop,  cpu clock=  1.00E-02
+ dcop: end dcop,  cpu clock=  1.00E-02 memory=    165 kb  tot_iter=       8
+ output: TSV_simplified.mt0
+ sweep: tran tran1    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.00E-02
+ tran: time= 1.0000E-09 tot_iter=      50 conv_iter=      24 cpu clock= 2.00E-02
+ tran: time= 2.0000E-09 tot_iter=      99 conv_iter=      48 cpu clock= 2.00E-02
+ tran: time= 3.0000E-09 tot_iter=     150 conv_iter=      72 cpu clock= 2.00E-02
+ tran: time= 4.0000E-09 tot_iter=     201 conv_iter=      96 cpu clock= 2.00E-02
+ tran: time= 5.0000E-09 tot_iter=     252 conv_iter=     120 cpu clock= 2.00E-02
+ tran: time= 6.0000E-09 tot_iter=     303 conv_iter=     144 cpu clock= 2.00E-02
+ tran: time= 7.0000E-09 tot_iter=     354 conv_iter=     168 cpu clock= 2.00E-02
+ tran: time= 8.0000E-09 tot_iter=     405 conv_iter=     192 cpu clock= 3.00E-02
+ tran: time= 9.0000E-09 tot_iter=     456 conv_iter=     216 cpu clock= 3.00E-02
+ tran: time= 1.0000E-08 tot_iter=     507 conv_iter=     240 cpu clock= 3.00E-02
+ sweep: tran tran1    end,  cpu clock=  3.00E-02 memory=    166 kb
+ parameter: inv_w_n         =    4.00E-08
+ dcop: begin dcop,  cpu clock=  3.00E-02
+ dcop: end dcop,  cpu clock=  3.00E-02 memory=    165 kb  tot_iter=      16
+ output: TSV_simplified.mt0
+ sweep: tran tran2    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  3.00E-02
+ tran: time= 1.0000E-09 tot_iter=      51 conv_iter=      24 cpu clock= 3.00E-02
+ tran: time= 2.0000E-09 tot_iter=     102 conv_iter=      48 cpu clock= 3.00E-02
+ tran: time= 3.0000E-09 tot_iter=     153 conv_iter=      72 cpu clock= 3.00E-02
+ tran: time= 4.0000E-09 tot_iter=     204 conv_iter=      96 cpu clock= 3.00E-02
+ tran: time= 5.0000E-09 tot_iter=     255 conv_iter=     120 cpu clock= 4.00E-02
+ tran: time= 6.0000E-09 tot_iter=     306 conv_iter=     144 cpu clock= 4.00E-02
+ tran: time= 7.0000E-09 tot_iter=     357 conv_iter=     168 cpu clock= 4.00E-02
+ tran: time= 8.0000E-09 tot_iter=     408 conv_iter=     192 cpu clock= 4.00E-02
+ tran: time= 9.0000E-09 tot_iter=     459 conv_iter=     216 cpu clock= 4.00E-02
+ tran: time= 1.0000E-08 tot_iter=     510 conv_iter=     240 cpu clock= 4.00E-02
+ sweep: tran tran2    end,  cpu clock=  4.00E-02 memory=    166 kb
+ parameter: inv_w_n         =    6.00E-08
+ dcop: begin dcop,  cpu clock=  4.00E-02
+ dcop: end dcop,  cpu clock=  4.00E-02 memory=    165 kb  tot_iter=      24
+ output: TSV_simplified.mt0
+ sweep: tran tran3    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  4.00E-02
+ tran: time= 1.0000E-09 tot_iter=      53 conv_iter=      25 cpu clock= 5.00E-02
+ tran: time= 2.0000E-09 tot_iter=     107 conv_iter=      50 cpu clock= 5.00E-02
+ tran: time= 3.0000E-09 tot_iter=     161 conv_iter=      75 cpu clock= 5.00E-02
+ tran: time= 4.0000E-09 tot_iter=     221 conv_iter=     103 cpu clock= 5.00E-02
+ tran: time= 5.0000E-09 tot_iter=     277 conv_iter=     129 cpu clock= 5.00E-02
+ tran: time= 6.0000E-09 tot_iter=     329 conv_iter=     153 cpu clock= 5.00E-02
+ tran: time= 7.0000E-09 tot_iter=     382 conv_iter=     177 cpu clock= 6.00E-02
+ tran: time= 8.0000E-09 tot_iter=     435 conv_iter=     201 cpu clock= 6.00E-02
+ tran: time= 9.0000E-09 tot_iter=     488 conv_iter=     225 cpu clock= 6.00E-02
+ tran: time= 1.0000E-08 tot_iter=     541 conv_iter=     249 cpu clock= 6.00E-02
+ sweep: tran tran3    end,  cpu clock=  6.00E-02 memory=    166 kb
+ parameter: inv_w_n         =    8.00E-08
+ dcop: begin dcop,  cpu clock=  6.00E-02
+ dcop: end dcop,  cpu clock=  6.00E-02 memory=    165 kb  tot_iter=      32
+ output: TSV_simplified.mt0
+ sweep: tran tran4    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  6.00E-02
+ tran: time= 1.0000E-09 tot_iter=      62 conv_iter=      29 cpu clock= 6.00E-02
+ tran: time= 2.0000E-09 tot_iter=     123 conv_iter=      57 cpu clock= 7.00E-02
+ tran: time= 3.0000E-09 tot_iter=     184 conv_iter=      85 cpu clock= 7.00E-02
+ tran: time= 4.0000E-09 tot_iter=     245 conv_iter=     113 cpu clock= 7.00E-02
+ tran: time= 5.0000E-09 tot_iter=     311 conv_iter=     144 cpu clock= 7.00E-02
+ tran: time= 6.0000E-09 tot_iter=     368 conv_iter=     170 cpu clock= 7.00E-02
+ tran: time= 7.0000E-09 tot_iter=     428 conv_iter=     198 cpu clock= 7.00E-02
+ tran: time= 8.0000E-09 tot_iter=     488 conv_iter=     226 cpu clock= 8.00E-02
+ tran: time= 9.0000E-09 tot_iter=     548 conv_iter=     254 cpu clock= 8.00E-02
+ tran: time= 1.0000E-08 tot_iter=     608 conv_iter=     282 cpu clock= 8.00E-02
+ sweep: tran tran4    end,  cpu clock=  8.00E-02 memory=    166 kb
+ parameter: inv_w_n         =    1.00E-07
+ dcop: begin dcop,  cpu clock=  8.00E-02
+ dcop: end dcop,  cpu clock=  8.00E-02 memory=    165 kb  tot_iter=      40
+ output: TSV_simplified.mt0
+ sweep: tran tran5    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  8.00E-02
+ tran: time= 1.0000E-09 tot_iter=      56 conv_iter=      26 cpu clock= 8.00E-02
+ tran: time= 2.0000E-09 tot_iter=     114 conv_iter=      52 cpu clock= 8.00E-02
+ tran: time= 3.0000E-09 tot_iter=     171 conv_iter=      78 cpu clock= 8.00E-02
+ tran: time= 4.0000E-09 tot_iter=     230 conv_iter=     105 cpu clock= 9.00E-02
+ tran: time= 5.0000E-09 tot_iter=     288 conv_iter=     132 cpu clock= 9.00E-02
+ tran: time= 6.0000E-09 tot_iter=     350 conv_iter=     161 cpu clock= 9.00E-02
+ tran: time= 7.0000E-09 tot_iter=     408 conv_iter=     188 cpu clock= 9.00E-02
+ tran: time= 8.0000E-09 tot_iter=     470 conv_iter=     217 cpu clock= 9.00E-02
+ tran: time= 9.0000E-09 tot_iter=     528 conv_iter=     244 cpu clock= 1.00E-01
+ tran: time= 1.0000E-08 tot_iter=     590 conv_iter=     273 cpu clock= 1.00E-01
+ sweep: tran tran5    end,  cpu clock=  1.00E-01 memory=    166 kb
+ parameter: inv_w_n         =    1.20E-07
+ dcop: begin dcop,  cpu clock=  1.00E-01
+ dcop: end dcop,  cpu clock=  1.00E-01 memory=    165 kb  tot_iter=      48
+ output: TSV_simplified.mt0
+ sweep: tran tran6    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.00E-01
+ tran: time= 1.0000E-09 tot_iter=      56 conv_iter=      26 cpu clock= 1.00E-01
+ tran: time= 2.0000E-09 tot_iter=     114 conv_iter=      52 cpu clock= 1.00E-01
+ tran: time= 3.0000E-09 tot_iter=     176 conv_iter=      81 cpu clock= 1.10E-01
+ tran: time= 4.0000E-09 tot_iter=     243 conv_iter=     113 cpu clock= 1.10E-01
+ tran: time= 5.0000E-09 tot_iter=     305 conv_iter=     142 cpu clock= 1.10E-01
+ tran: time= 6.0000E-09 tot_iter=     363 conv_iter=     169 cpu clock= 1.10E-01
+ tran: time= 7.0000E-09 tot_iter=     418 conv_iter=     194 cpu clock= 1.10E-01
+ tran: time= 8.0000E-09 tot_iter=     473 conv_iter=     219 cpu clock= 1.20E-01
+ tran: time= 9.0000E-09 tot_iter=     528 conv_iter=     244 cpu clock= 1.20E-01
+ tran: time= 1.0000E-08 tot_iter=     583 conv_iter=     269 cpu clock= 1.20E-01
+ sweep: tran tran6    end,  cpu clock=  1.20E-01 memory=    166 kb
+ parameter: inv_w_n         =    1.40E-07
+ dcop: begin dcop,  cpu clock=  1.20E-01
+ dcop: end dcop,  cpu clock=  1.20E-01 memory=    165 kb  tot_iter=      56
+ output: TSV_simplified.mt0
+ sweep: tran tran7    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.20E-01
+ tran: time= 1.0000E-09 tot_iter=      62 conv_iter=      29 cpu clock= 1.20E-01
+ tran: time= 2.0000E-09 tot_iter=     127 conv_iter=      59 cpu clock= 1.20E-01
+ tran: time= 3.0000E-09 tot_iter=     189 conv_iter=      88 cpu clock= 1.30E-01
+ tran: time= 4.0000E-09 tot_iter=     249 conv_iter=     115 cpu clock= 1.30E-01
+ tran: time= 5.0000E-09 tot_iter=     311 conv_iter=     144 cpu clock= 1.30E-01
+ tran: time= 6.0000E-09 tot_iter=     371 conv_iter=     171 cpu clock= 1.30E-01
+ tran: time= 7.0000E-09 tot_iter=     433 conv_iter=     200 cpu clock= 1.30E-01
+ tran: time= 8.0000E-09 tot_iter=     493 conv_iter=     227 cpu clock= 1.30E-01
+ tran: time= 9.0000E-09 tot_iter=     555 conv_iter=     256 cpu clock= 1.40E-01
+ tran: time= 1.0000E-08 tot_iter=     615 conv_iter=     283 cpu clock= 1.40E-01
+ sweep: tran tran7    end,  cpu clock=  1.40E-01 memory=    166 kb
+ parameter: inv_w_n         =    1.60E-07
+ dcop: begin dcop,  cpu clock=  1.40E-01
+ dcop: end dcop,  cpu clock=  1.40E-01 memory=    165 kb  tot_iter=      64
+ output: TSV_simplified.mt0
+ sweep: tran tran8    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.40E-01
+ tran: time= 1.0000E-09 tot_iter=      61 conv_iter=      28 cpu clock= 1.40E-01
+ tran: time= 2.0000E-09 tot_iter=     128 conv_iter=      59 cpu clock= 1.40E-01
+ tran: time= 3.0000E-09 tot_iter=     189 conv_iter=      87 cpu clock= 1.50E-01
+ tran: time= 4.0000E-09 tot_iter=     252 conv_iter=     115 cpu clock= 1.50E-01
+ tran: time= 5.0000E-09 tot_iter=     313 conv_iter=     143 cpu clock= 1.50E-01
+ tran: time= 6.0000E-09 tot_iter=     376 conv_iter=     171 cpu clock= 1.50E-01
+ tran: time= 7.0000E-09 tot_iter=     437 conv_iter=     199 cpu clock= 1.50E-01
+ tran: time= 8.0000E-09 tot_iter=     500 conv_iter=     227 cpu clock= 1.50E-01
+ tran: time= 9.0000E-09 tot_iter=     561 conv_iter=     255 cpu clock= 1.60E-01
+ tran: time= 1.0000E-08 tot_iter=     624 conv_iter=     283 cpu clock= 1.60E-01
+ sweep: tran tran8    end,  cpu clock=  1.60E-01 memory=    166 kb
+ parameter: inv_w_n         =    1.80E-07
+ dcop: begin dcop,  cpu clock=  1.60E-01
+ dcop: end dcop,  cpu clock=  1.60E-01 memory=    165 kb  tot_iter=      72
+ output: TSV_simplified.mt0
+ sweep: tran tran9    begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.60E-01
+ tran: time= 1.0000E-09 tot_iter=      67 conv_iter=      31 cpu clock= 1.60E-01
+ tran: time= 2.0000E-09 tot_iter=     136 conv_iter=      62 cpu clock= 1.60E-01
+ tran: time= 3.0000E-09 tot_iter=     205 conv_iter=      93 cpu clock= 1.60E-01
+ tran: time= 4.0000E-09 tot_iter=     274 conv_iter=     124 cpu clock= 1.70E-01
+ tran: time= 5.0000E-09 tot_iter=     343 conv_iter=     155 cpu clock= 1.70E-01
+ tran: time= 6.0000E-09 tot_iter=     412 conv_iter=     186 cpu clock= 1.70E-01
+ tran: time= 7.0000E-09 tot_iter=     481 conv_iter=     217 cpu clock= 1.70E-01
+ tran: time= 8.0000E-09 tot_iter=     550 conv_iter=     248 cpu clock= 1.80E-01
+ tran: time= 9.0000E-09 tot_iter=     619 conv_iter=     279 cpu clock= 1.80E-01
+ tran: time= 1.0000E-08 tot_iter=     688 conv_iter=     310 cpu clock= 1.80E-01
+ sweep: tran tran9    end,  cpu clock=  1.80E-01 memory=    166 kb
+ parameter: inv_w_n         =    2.00E-07
+ dcop: begin dcop,  cpu clock=  1.80E-01
+ dcop: end dcop,  cpu clock=  1.80E-01 memory=    165 kb  tot_iter=      80
+ output: TSV_simplified.mt0
+ sweep: tran tran10   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  1.80E-01
+ tran: time= 1.0000E-09 tot_iter=      68 conv_iter=      32 cpu clock= 1.80E-01
+ tran: time= 2.0000E-09 tot_iter=     135 conv_iter=      62 cpu clock= 1.90E-01
+ tran: time= 3.0000E-09 tot_iter=     202 conv_iter=      92 cpu clock= 1.90E-01
+ tran: time= 4.0000E-09 tot_iter=     269 conv_iter=     122 cpu clock= 1.90E-01
+ tran: time= 5.0000E-09 tot_iter=     336 conv_iter=     152 cpu clock= 1.90E-01
+ tran: time= 6.0000E-09 tot_iter=     403 conv_iter=     182 cpu clock= 1.90E-01
+ tran: time= 7.0000E-09 tot_iter=     470 conv_iter=     212 cpu clock= 2.00E-01
+ tran: time= 8.0000E-09 tot_iter=     537 conv_iter=     242 cpu clock= 2.00E-01
+ tran: time= 9.0000E-09 tot_iter=     604 conv_iter=     272 cpu clock= 2.00E-01
+ tran: time= 1.0000E-08 tot_iter=     671 conv_iter=     302 cpu clock= 2.00E-01
+ sweep: tran tran10   end,  cpu clock=  2.00E-01 memory=    166 kb
+ parameter: inv_w_n         =    2.20E-07
+ dcop: begin dcop,  cpu clock=  2.00E-01
+ dcop: end dcop,  cpu clock=  2.00E-01 memory=    165 kb  tot_iter=      88
+ output: TSV_simplified.mt0
+ sweep: tran tran11   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  2.00E-01
+ tran: time= 1.0000E-09 tot_iter=      66 conv_iter=      30 cpu clock= 2.00E-01
+ tran: time= 2.0000E-09 tot_iter=     137 conv_iter=      62 cpu clock= 2.10E-01
+ tran: time= 3.0000E-09 tot_iter=     208 conv_iter=      94 cpu clock= 2.10E-01
+ tran: time= 4.0000E-09 tot_iter=     279 conv_iter=     126 cpu clock= 2.10E-01
+ tran: time= 5.0000E-09 tot_iter=     350 conv_iter=     158 cpu clock= 2.10E-01
+ tran: time= 6.0000E-09 tot_iter=     421 conv_iter=     190 cpu clock= 2.20E-01
+ tran: time= 7.0000E-09 tot_iter=     492 conv_iter=     222 cpu clock= 2.20E-01
+ tran: time= 8.0000E-09 tot_iter=     563 conv_iter=     254 cpu clock= 2.20E-01
+ tran: time= 9.0000E-09 tot_iter=     634 conv_iter=     286 cpu clock= 2.20E-01
+ tran: time= 1.0000E-08 tot_iter=     705 conv_iter=     318 cpu clock= 2.20E-01
+ sweep: tran tran11   end,  cpu clock=  2.20E-01 memory=    166 kb
+ parameter: inv_w_n         =    2.40E-07
+ dcop: begin dcop,  cpu clock=  2.20E-01
+ dcop: end dcop,  cpu clock=  2.30E-01 memory=    165 kb  tot_iter=      96
+ output: TSV_simplified.mt0
+ sweep: tran tran12   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  2.30E-01
+ tran: time= 1.0000E-09 tot_iter=      72 conv_iter=      33 cpu clock= 2.30E-01
+ tran: time= 2.0000E-09 tot_iter=     141 conv_iter=      64 cpu clock= 2.30E-01
+ tran: time= 3.0000E-09 tot_iter=     220 conv_iter=     100 cpu clock= 2.30E-01
+ tran: time= 4.0000E-09 tot_iter=     297 conv_iter=     135 cpu clock= 2.40E-01
+ tran: time= 5.0000E-09 tot_iter=     369 conv_iter=     167 cpu clock= 2.40E-01
+ tran: time= 6.0000E-09 tot_iter=     447 conv_iter=     202 cpu clock= 2.40E-01
+ tran: time= 7.0000E-09 tot_iter=     519 conv_iter=     235 cpu clock= 2.40E-01
+ tran: time= 8.0000E-09 tot_iter=     590 conv_iter=     267 cpu clock= 2.50E-01
+ tran: time= 9.0000E-09 tot_iter=     669 conv_iter=     303 cpu clock= 2.50E-01
+ tran: time= 1.0000E-08 tot_iter=     739 conv_iter=     335 cpu clock= 2.50E-01
+ sweep: tran tran12   end,  cpu clock=  2.50E-01 memory=    166 kb
+ parameter: inv_w_n         =    2.60E-07
+ dcop: begin dcop,  cpu clock=  2.50E-01
+ dcop: end dcop,  cpu clock=  2.50E-01 memory=    165 kb  tot_iter=     104
+ output: TSV_simplified.mt0
+ sweep: tran tran13   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  2.50E-01
+ tran: time= 1.0000E-09 tot_iter=      72 conv_iter=      33 cpu clock= 2.50E-01
+ tran: time= 2.0000E-09 tot_iter=     143 conv_iter=      65 cpu clock= 2.60E-01
+ tran: time= 3.0000E-09 tot_iter=     214 conv_iter=      97 cpu clock= 2.60E-01
+ tran: time= 4.0000E-09 tot_iter=     285 conv_iter=     129 cpu clock= 2.60E-01
+ tran: time= 5.0000E-09 tot_iter=     356 conv_iter=     161 cpu clock= 2.60E-01
+ tran: time= 6.0000E-09 tot_iter=     427 conv_iter=     193 cpu clock= 2.60E-01
+ tran: time= 7.0000E-09 tot_iter=     498 conv_iter=     225 cpu clock= 2.70E-01
+ tran: time= 8.0000E-09 tot_iter=     569 conv_iter=     257 cpu clock= 2.70E-01
+ tran: time= 9.0000E-09 tot_iter=     640 conv_iter=     289 cpu clock= 2.70E-01
+ tran: time= 1.0000E-08 tot_iter=     711 conv_iter=     321 cpu clock= 2.70E-01
+ sweep: tran tran13   end,  cpu clock=  2.70E-01 memory=    166 kb
+ parameter: inv_w_n         =    2.80E-07
+ dcop: begin dcop,  cpu clock=  2.70E-01
+ dcop: end dcop,  cpu clock=  2.70E-01 memory=    165 kb  tot_iter=     112
+ output: TSV_simplified.mt0
+ sweep: tran tran14   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  2.70E-01
+ tran: time= 1.0000E-09 tot_iter=      72 conv_iter=      33 cpu clock= 2.80E-01
+ tran: time= 2.0000E-09 tot_iter=     148 conv_iter=      67 cpu clock= 2.80E-01
+ tran: time= 3.0000E-09 tot_iter=     230 conv_iter=     104 cpu clock= 2.80E-01
+ tran: time= 4.0000E-09 tot_iter=     306 conv_iter=     138 cpu clock= 2.80E-01
+ tran: time= 5.0000E-09 tot_iter=     382 conv_iter=     172 cpu clock= 2.90E-01
+ tran: time= 6.0000E-09 tot_iter=     458 conv_iter=     206 cpu clock= 2.90E-01
+ tran: time= 7.0000E-09 tot_iter=     534 conv_iter=     240 cpu clock= 2.90E-01
+ tran: time= 8.0000E-09 tot_iter=     610 conv_iter=     274 cpu clock= 2.90E-01
+ tran: time= 9.0000E-09 tot_iter=     686 conv_iter=     308 cpu clock= 3.00E-01
+ tran: time= 1.0000E-08 tot_iter=     762 conv_iter=     342 cpu clock= 3.00E-01
+ sweep: tran tran14   end,  cpu clock=  3.00E-01 memory=    166 kb
+ parameter: inv_w_n         =    3.00E-07
+ dcop: begin dcop,  cpu clock=  3.00E-01
+ dcop: end dcop,  cpu clock=  3.00E-01 memory=    165 kb  tot_iter=     120
+ output: TSV_simplified.mt0
+ sweep: tran tran15   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  3.00E-01
+ tran: time= 1.0000E-09 tot_iter=      68 conv_iter=      31 cpu clock= 3.00E-01
+ tran: time= 2.0000E-09 tot_iter=     149 conv_iter=      67 cpu clock= 3.00E-01
+ tran: time= 3.0000E-09 tot_iter=     222 conv_iter=     100 cpu clock= 3.10E-01
+ tran: time= 4.0000E-09 tot_iter=     303 conv_iter=     136 cpu clock= 3.10E-01
+ tran: time= 5.0000E-09 tot_iter=     376 conv_iter=     169 cpu clock= 3.10E-01
+ tran: time= 6.0000E-09 tot_iter=     457 conv_iter=     205 cpu clock= 3.10E-01
+ tran: time= 7.0000E-09 tot_iter=     530 conv_iter=     238 cpu clock= 3.20E-01
+ tran: time= 8.0000E-09 tot_iter=     611 conv_iter=     274 cpu clock= 3.20E-01
+ tran: time= 9.0000E-09 tot_iter=     684 conv_iter=     307 cpu clock= 3.20E-01
+ tran: time= 1.0000E-08 tot_iter=     765 conv_iter=     343 cpu clock= 3.20E-01
+ sweep: tran tran15   end,  cpu clock=  3.20E-01 memory=    166 kb
+ parameter: inv_w_n         =    3.20E-07
+ dcop: begin dcop,  cpu clock=  3.20E-01
+ dcop: end dcop,  cpu clock=  3.20E-01 memory=    165 kb  tot_iter=     128
+ output: TSV_simplified.mt0
+ sweep: tran tran16   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  3.20E-01
+ tran: time= 1.0000E-09 tot_iter=      79 conv_iter=      36 cpu clock= 3.30E-01
+ tran: time= 2.0000E-09 tot_iter=     164 conv_iter=      75 cpu clock= 3.30E-01
+ tran: time= 3.0000E-09 tot_iter=     243 conv_iter=     111 cpu clock= 3.30E-01
+ tran: time= 4.0000E-09 tot_iter=     322 conv_iter=     147 cpu clock= 3.40E-01
+ tran: time= 5.0000E-09 tot_iter=     402 conv_iter=     183 cpu clock= 3.40E-01
+ tran: time= 6.0000E-09 tot_iter=     481 conv_iter=     219 cpu clock= 3.40E-01
+ tran: time= 7.0000E-09 tot_iter=     566 conv_iter=     258 cpu clock= 3.40E-01
+ tran: time= 8.0000E-09 tot_iter=     645 conv_iter=     294 cpu clock= 3.50E-01
+ tran: time= 9.0000E-09 tot_iter=     731 conv_iter=     333 cpu clock= 3.50E-01
+ tran: time= 1.0000E-08 tot_iter=     817 conv_iter=     372 cpu clock= 3.50E-01
+ sweep: tran tran16   end,  cpu clock=  3.50E-01 memory=    166 kb
+ parameter: inv_w_n         =    3.40E-07
+ dcop: begin dcop,  cpu clock=  3.50E-01
+ dcop: end dcop,  cpu clock=  3.50E-01 memory=    165 kb  tot_iter=     136
+ output: TSV_simplified.mt0
+ sweep: tran tran17   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  3.50E-01
+ tran: time= 1.0000E-09 tot_iter=      81 conv_iter=      37 cpu clock= 3.50E-01
+ tran: time= 2.0000E-09 tot_iter=     166 conv_iter=      76 cpu clock= 3.60E-01
+ tran: time= 3.0000E-09 tot_iter=     248 conv_iter=     113 cpu clock= 3.60E-01
+ tran: time= 4.0000E-09 tot_iter=     328 conv_iter=     150 cpu clock= 3.60E-01
+ tran: time= 5.0000E-09 tot_iter=     409 conv_iter=     187 cpu clock= 3.70E-01
+ tran: time= 6.0000E-09 tot_iter=     491 conv_iter=     224 cpu clock= 3.70E-01
+ tran: time= 7.0000E-09 tot_iter=     573 conv_iter=     261 cpu clock= 3.70E-01
+ tran: time= 8.0000E-09 tot_iter=     653 conv_iter=     298 cpu clock= 3.70E-01
+ tran: time= 9.0000E-09 tot_iter=     734 conv_iter=     335 cpu clock= 3.80E-01
+ tran: time= 1.0000E-08 tot_iter=     816 conv_iter=     372 cpu clock= 3.80E-01
+ sweep: tran tran17   end,  cpu clock=  3.80E-01 memory=    166 kb
+ parameter: inv_w_n         =    3.60E-07
+ dcop: begin dcop,  cpu clock=  3.80E-01
+ dcop: end dcop,  cpu clock=  3.80E-01 memory=    165 kb  tot_iter=     144
+ output: TSV_simplified.mt0
+ sweep: tran tran18   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  3.80E-01
+ tran: time= 1.0000E-09 tot_iter=      82 conv_iter=      38 cpu clock= 3.80E-01
+ tran: time= 2.0000E-09 tot_iter=     165 conv_iter=      76 cpu clock= 3.80E-01
+ tran: time= 3.0000E-09 tot_iter=     249 conv_iter=     114 cpu clock= 3.90E-01
+ tran: time= 4.0000E-09 tot_iter=     332 conv_iter=     152 cpu clock= 3.90E-01
+ tran: time= 5.0000E-09 tot_iter=     416 conv_iter=     190 cpu clock= 3.90E-01
+ tran: time= 6.0000E-09 tot_iter=     499 conv_iter=     228 cpu clock= 4.00E-01
+ tran: time= 7.0000E-09 tot_iter=     583 conv_iter=     266 cpu clock= 4.00E-01
+ tran: time= 8.0000E-09 tot_iter=     666 conv_iter=     304 cpu clock= 4.00E-01
+ tran: time= 9.0000E-09 tot_iter=     750 conv_iter=     342 cpu clock= 4.00E-01
+ tran: time= 1.0000E-08 tot_iter=     833 conv_iter=     380 cpu clock= 4.10E-01
+ sweep: tran tran18   end,  cpu clock=  4.10E-01 memory=    166 kb
+ parameter: inv_w_n         =    3.80E-07
+ dcop: begin dcop,  cpu clock=  4.10E-01
+ dcop: end dcop,  cpu clock=  4.10E-01 memory=    165 kb  tot_iter=     152
+ output: TSV_simplified.mt0
+ sweep: tran tran19   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  4.10E-01
+ tran: time= 1.0000E-09 tot_iter=      79 conv_iter=      36 cpu clock= 4.10E-01
+ tran: time= 2.0000E-09 tot_iter=     169 conv_iter=      77 cpu clock= 4.10E-01
+ tran: time= 3.0000E-09 tot_iter=     258 conv_iter=     118 cpu clock= 4.20E-01
+ tran: time= 4.0000E-09 tot_iter=     346 conv_iter=     159 cpu clock= 4.20E-01
+ tran: time= 5.0000E-09 tot_iter=     430 conv_iter=     197 cpu clock= 4.20E-01
+ tran: time= 6.0000E-09 tot_iter=     520 conv_iter=     238 cpu clock= 4.20E-01
+ tran: time= 7.0000E-09 tot_iter=     609 conv_iter=     279 cpu clock= 4.20E-01
+ tran: time= 8.0000E-09 tot_iter=     699 conv_iter=     320 cpu clock= 4.30E-01
+ tran: time= 9.0000E-09 tot_iter=     789 conv_iter=     361 cpu clock= 4.30E-01
+ tran: time= 1.0000E-08 tot_iter=     877 conv_iter=     402 cpu clock= 4.30E-01
+ sweep: tran tran19   end,  cpu clock=  4.30E-01 memory=    166 kb
+ parameter: inv_w_n         =    4.00E-07
+ dcop: begin dcop,  cpu clock=  4.30E-01
+ dcop: end dcop,  cpu clock=  4.30E-01 memory=    165 kb  tot_iter=     160
+ output: TSV_simplified.mt0
+ sweep: tran tran20   begin, stop_t=  1.00E-08 #sweeps=**** cpu clock=  4.30E-01
+ tran: time= 1.0000E-09 tot_iter=      81 conv_iter=      37 cpu clock= 4.30E-01
+ tran: time= 2.0000E-09 tot_iter=     167 conv_iter=      76 cpu clock= 4.40E-01
+ tran: time= 3.0000E-09 tot_iter=     253 conv_iter=     115 cpu clock= 4.40E-01
+ tran: time= 4.0000E-09 tot_iter=     339 conv_iter=     154 cpu clock= 4.40E-01
+ tran: time= 5.0000E-09 tot_iter=     425 conv_iter=     193 cpu clock= 4.40E-01
+ tran: time= 6.0000E-09 tot_iter=     511 conv_iter=     232 cpu clock= 4.50E-01
+ tran: time= 7.0000E-09 tot_iter=     597 conv_iter=     271 cpu clock= 4.50E-01
+ tran: time= 8.0000E-09 tot_iter=     683 conv_iter=     310 cpu clock= 4.50E-01
+ tran: time= 9.0000E-09 tot_iter=     769 conv_iter=     349 cpu clock= 4.60E-01
+ tran: time= 1.0000E-08 tot_iter=     855 conv_iter=     388 cpu clock= 4.60E-01
+ sweep: tran tran20   end,  cpu clock=  4.60E-01 memory=    166 kb
+ sweep: parameter       parameter       1 end
+>info:         ***** hspice job concluded
+ Init: hspice initialization file: /home/software/synopsys-2008/hspice/hspice/hs
+ lic: Release hspice token(s)

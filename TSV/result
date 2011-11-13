@@ -1,0 +1,1215 @@
+Using: /usr/bin/time -p /home/software/synopsys-2008/hspice/hspice/linux/hspice TSV_simplified.sp
+ ****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) linux ******                   
+  Copyright (C) 2008 Synopsys, Inc. All Rights Reserved.                        
+  Unpublished-rights reserved under US copyright laws.
+  This program is protected by law and is subject to the 
+  terms and conditions of the license agreement found in:
+    /home/software/synopsys-2008/hspice/hspice/license.warn
+  Use of this program is your acceptance to be bound by this 
+  license agreement. HSPICE is the trademark of Synopsys, Inc.
+  Input File: TSV_simplified.sp                                                 
+ lic:  
+ lic: FLEXlm: v8.5b 
+ lic: USER:   jzx105               HOSTNAME: tsinghua.cse.psu.edu 
+ lic: HOSTID: 0011430ccdd1         PID:      29392 
+ lic: Using FLEXlm license file: 
+ lic: 1700@telperion.cse.psu.edu 
+ lic: Checkout 1 hspice 
+ lic: License/Maintenance for hspice will expire on 19-oct-2011/2010.03 
+ lic: FLOATING license(s) on SERVER telperion.cse.psu.edu 
+ lic:   
+ Init: read install configuration file: /home/software/synopsys-2008/hspice/hspice/meta.cfg
+ Init: hspice initialization file: /home/software/synopsys-2008/hspice/hspice/hspice.ini
+
+ .global vdd!
+
+ **.include "/home/mdl/jzx105/hspice/tsv/model/45nm_hp.pm"  
+ **power = 1
+ **.include "/home/mdl/jzx105/hspice/tsv/model/45nm_lp.pm"  
+ **power = 1.1
+ **.include "/home/mdl/jzx105/hspice/tsv/model/32nm_hp.pm"  
+ **power = 0.9 
+ **.include "/home/mdl/jzx105/hspice/tsv/model/32nm_lp.pm"  
+ **power = 1
+ **.include "/home/mdl/jzx105/hspice/tsv/model/22nm_hp.pm"  
+ **power = 0.8
+ **.include "/home/mdl/jzx105/hspice/tsv/model/22nm_lp.pm"  
+ **power = 0.95
+ **.include "/home/mdl/jzx105/hspice/tsv/model/16nm_hp.pm"  
+ **power = 0.7
+ .include "/home/mdl/jzx105/hspice/tsv/model/16nm_lp.pm"  
+ * ptm low power 16nm metal gate / high-k / strained-si
+ * nominal vdd = 0.9v
+
+ .model  nmos  nmos  level = 54
+
+
+ +version = 4.0             binunit = 1               paramchk= 1               mobmod  = 0             
+ +capmod  = 2               igcmod  = 1               igbmod  = 1               geomod  = 1             
+ +diomod  = 1               rdsmod  = 0               rbodymod= 1               rgatemod= 1             
+ +permod  = 1               acnqsmod= 0               trnqsmod= 0             
+
+ +tnom    = 27              toxe    = 1.2e-009        toxp    = 9e-010          toxm    = 1.2e-009      
+ +dtox    = 3e-010          epsrox  = 3.9             wint    = 5e-009          lint    = 0             
+ +ll      = 0               wl      = 0               lln     = 1               wln     = 1             
+ +lw      = 0               ww      = 0               lwn     = 1               wwn     = 1             
+ +lwl     = 0               wwl     = 0               xpart   = 0               toxref  = 1.2e-009      
+
+ +vth0    = 0.68191         k1      = 0.4             k2      = 0               k3      = 0             
+ +k3b     = 0               w0      = 2.5e-006        dvt0    = 1               dvt1    = 2             
+ +dvt2    = 0               dvt0w   = 0               dvt1w   = 0               dvt2w   = 0             
+ +dsub    = 0.1             minv    = 0.05            voffl   = 0               dvtp0   = 1e-011        
+ +dvtp1   = 0.1             lpe0    = 0               lpeb    = 0               xj      = 5e-009        
+ +ngate   = 1e+023          ndep    = 7e+018          nsd     = 2e+020          phin    = 0             
+ +cdsc    = 0               cdscb   = 0               cdscd   = 0               cit     = 0             
+ +voff    = -0.1014         nfactor = 1.6             eta0    = 0.0095          etab    = 0             
+ +vfb     = -0.55           u0      = 0.028           ua      = 6e-010          ub      = 1.2e-018      
+ +uc      = 0               vsat    = 200000          a0      = 1               ags     = 0             
+ +a1      = 0               a2      = 1               b0      = 0               b1      = 0             
+ +keta    = 0.04            dwg     = 0               dwb     = 0               pclm    = 0.02          
+ +pdiblc1 = 0.001           pdiblc2 = 0.001           pdiblcb = -0.005          drout   = 0.5           
+ +pvag    = 1e-020          delta   = 0.01            pscbe1  = 8.14e+008       pscbe2  = 1e-007        
+ +fprout  = 0.2             pdits   = 0.01            pditsd  = 0.23            pditsl  = 2300000       
+ +rsh     = 5               rdsw    = 170             rsw     = 75              rdw     = 75            
+ +rdswmin = 0               rdwmin  = 0               rswmin  = 0               prwg    = 0             
+ +prwb    = 0               wr      = 1               alpha0  = 0.074           alpha1  = 0.005         
+ +beta0   = 30              agidl   = 0.0002          bgidl   = 2.1e+009        cgidl   = 0.0002        
+ +egidl   = 0.8             aigbacc = 0.012           bigbacc = 0.0028          cigbacc = 0.002         
+ +nigbacc = 1               aigbinv = 0.014           bigbinv = 0.004           cigbinv = 0.004         
+ +eigbinv = 1.1             nigbinv = 3               aigc    = 0.015211        bigc    = 0.0027432     
+ +cigc    = 0.002           aigsd   = 0.015211        bigsd   = 0.0027432       cigsd   = 0.002         
+ +nigc    = 1               poxedge = 1               pigcd   = 1               ntox    = 1             
+ +xrcrg1  = 12              xrcrg2  = 5             
+
+ +cgso    = 5e-011          cgdo    = 5e-011          cgbo    = 2.56e-011       cgdl    = 2.653e-010    
+ +cgsl    = 2.653e-010      ckappas = 0.03            ckappad = 0.03            acde    = 1             
+ +moin    = 15              noff    = 0.9             voffcv  = 0.02          
+
+ +kt1     = -0.11           kt1l    = 0               kt2     = 0.022           ute     = -1.5          
+ +ua1     = 4.31e-009       ub1     = 7.61e-018       uc1     = -5.6e-011       prt     = 0             
+ +at      = 33000         
+
+ +fnoimod = 1               tnoimod = 0             
+
+ +jss     = 0.0001          jsws    = 1e-011          jswgs   = 1e-010          njs     = 1             
+ +ijthsfwd= 0.01            ijthsrev= 0.001           bvs     = 10              xjbvs   = 1             
+ +jsd     = 0.0001          jswd    = 1e-011          jswgd   = 1e-010          njd     = 1             
+ +ijthdfwd= 0.01            ijthdrev= 0.001           bvd     = 10              xjbvd   = 1             
+ +pbs     = 1               cjs     = 0.0005          mjs     = 0.5             pbsws   = 1             
+ +cjsws   = 5e-010          mjsws   = 0.33            pbswgs  = 1               cjswgs  = 3e-010        
+ +mjswgs  = 0.33            pbd     = 1               cjd     = 0.0005          mjd     = 0.5           
+ +pbswd   = 1               cjswd   = 5e-010          mjswd   = 0.33            pbswgd  = 1             
+ +cjswgd  = 5e-010          mjswgd  = 0.33            tpb     = 0.005           tcj     = 0.001         
+ +tpbsw   = 0.005           tcjsw   = 0.001           tpbswg  = 0.005           tcjswg  = 0.001         
+ +xtis    = 3               xtid    = 3             
+
+ +dmcg    = 0               dmci    = 0               dmdg    = 0               dmcgt   = 0             
+ +dwj     = 0               xgw     = 0               xgl     = 0             
+
+ +rshg    = 0.4             gbmin   = 1e-010          rbpb    = 5               rbpd    = 15            
+ +rbps    = 15              rbdb    = 15              rbsb    = 15              ngcon   = 1             
+
+
+ .model  pmos  pmos  level = 54
+
+
+ +version = 4.0             binunit = 1               paramchk= 1               mobmod  = 0             
+ +capmod  = 2               igcmod  = 1               igbmod  = 1               geomod  = 1             
+ +diomod  = 1               rdsmod  = 0               rbodymod= 1               rgatemod= 1             
+ +permod  = 1               acnqsmod= 0               trnqsmod= 0             
+
+ +tnom    = 27              toxe    = 1.22e-009       toxp    = 9e-010          toxm    = 1.22e-009     
+ +dtox    = 3.2e-010        epsrox  = 3.9             wint    = 5e-009          lint    = 8e-010        
+ +ll      = 0               wl      = 0               lln     = 1               wln     = 1             
+ +lw      = 0               ww      = 0               lwn     = 1               wwn     = 1             
+ +lwl     = 0               wwl     = 0               xpart   = 0               toxref  = 1.22e-009     
+
+ +vth0    = -0.6862         k1      = 0.4             k2      = -0.01           k3      = 0             
+ +k3b     = 0               w0      = 2.5e-006        dvt0    = 1               dvt1    = 2             
+ +dvt2    = -0.032          dvt0w   = 0               dvt1w   = 0               dvt2w   = 0             
+ +dsub    = 0.1             minv    = 0.05            voffl   = 0               dvtp0   = 1e-011        
+ +dvtp1   = 0.05            lpe0    = 0               lpeb    = 0               xj      = 7.2e-009      
+ +ngate   = 1e+023          ndep    = 4.4e+018        nsd     = 2e+020          phin    = 0             
+ +cdsc    = 0               cdscb   = 0               cdscd   = 0               cit     = 0             
+ +voff    = -0.08           nfactor = 1.8             eta0    = 0.0095          etab    = 0             
+ +vfb     = 0.55            u0      = 0.0075          ua      = 2e-009          ub      = 5e-019        
+ +uc      = 0               vsat    = 195000          a0      = 1               ags     = 1e-020        
+ +a1      = 0               a2      = 1               b0      = 0               b1      = 0             
+ +keta    = -0.047          dwg     = 0               dwb     = 0               pclm    = 0.12          
+ +pdiblc1 = 0.001           pdiblc2 = 0.001           pdiblcb = 3.4e-008        drout   = 0.56          
+ +pvag    = 1e-020          delta   = 0.01            pscbe1  = 8.14e+008       pscbe2  = 9.58e-007     
+ +fprout  = 0.2             pdits   = 0.08            pditsd  = 0.23            pditsl  = 2300000       
+ +rsh     = 5               rdsw    = 220             rsw     = 72.5            rdw     = 72.5          
+ +rdswmin = 0               rdwmin  = 0               rswmin  = 0               prwg    = 0             
+ +prwb    = 0               wr      = 1               alpha0  = 0.074           alpha1  = 0.005         
+ +beta0   = 30              agidl   = 0.0002          bgidl   = 2.1e+009        cgidl   = 0.0002        
+ +egidl   = 0.8             aigbacc = 0.012           bigbacc = 0.0028          cigbacc = 0.002         
+ +nigbacc = 1               aigbinv = 0.014           bigbinv = 0.004           cigbinv = 0.004         
+ +eigbinv = 1.1             nigbinv = 3               aigc    = 0.0097          bigc    = 0.00125       
+ +cigc    = 0.0008          aigsd   = 0.0115           bigsd   = 0.00125         cigsd   = 0.0008        
+ +nigc    = 1               poxedge = 1               pigcd   = 1               ntox    = 1             
+ +xrcrg1  = 12              xrcrg2  = 5             
+
+ +cgso    = 5e-011          cgdo    = 5e-011          cgbo    = 2.56e-011       cgdl    = 2.653e-010    
+ +cgsl    = 2.653e-010      ckappas = 0.03            ckappad = 0.03            acde    = 1             
+ +moin    = 15              noff    = 0.9             voffcv  = 0.02          
+
+ +kt1     = -0.11           kt1l    = 0               kt2     = 0.022           ute     = -1.5          
+ +ua1     = 4.31e-009       ub1     = 7.61e-018       uc1     = -5.6e-011       prt     = 0             
+ +at      = 33000         
+
+ +fnoimod = 1               tnoimod = 0             
+
+ +jss     = 0.0001          jsws    = 1e-011          jswgs   = 1e-010          njs     = 1             
+ +ijthsfwd= 0.01            ijthsrev= 0.001           bvs     = 10              xjbvs   = 1             
+ +jsd     = 0.0001          jswd    = 1e-011          jswgd   = 1e-010          njd     = 1             
+ +ijthdfwd= 0.01            ijthdrev= 0.001           bvd     = 10              xjbvd   = 1             
+ +pbs     = 1               cjs     = 0.0005          mjs     = 0.5             pbsws   = 1             
+ +cjsws   = 5e-010          mjsws   = 0.33            pbswgs  = 1               cjswgs  = 3e-010        
+ +mjswgs  = 0.33            pbd     = 1               cjd     = 0.0005          mjd     = 0.5           
+ +pbswd   = 1               cjswd   = 5e-010          mjswd   = 0.33            pbswgd  = 1             
+ +cjswgd  = 5e-010          mjswgd  = 0.33            tpb     = 0.005           tcj     = 0.001         
+ +tpbsw   = 0.005           tcjsw   = 0.001           tpbswg  = 0.005           tcjswg  = 0.001         
+ +xtis    = 3               xtid    = 3             
+
+ +dmcg    = 0               dmci    = 0               dmdg    = 0               dmcgt   = 0             
+ +dwj     = 0               xgw     = 0               xgl     = 0             
+
+ +rshg    = 0.4             gbmin   = 1e-010          rbpb    = 5               rbpd    = 15            
+ +rbps    = 15              rbdb    = 15              rbsb    = 15              ngcon   = 1             
+
+ **power = 0.9
+
+
+ .temp 25
+ .option
+ +    artist=2
+ +    ingold=2
+ +    measout=1
+ +    psf=2
+ +    method=gear
+ +    autostop=0
+ +    runlvl=2
+ **+    probe post
+ +    post
+
+ .param period=1n rise=10p
+ **.param vhigh = 1.5
+ **.param vhigh = 1.1
+ **.param vhigh = 1
+ .param vhigh = 0.9
+ **.param vhigh = 0.8
+ **.param vhigh = 0.95
+ **.param vhigh = 0.7
+ .param inv_w_n = 150n
+ **.param lt=130n
+ **.param lt=45n
+ **.param lt=32n
+ **.param lt=22n
+ .param lt=16n
+ vd vdd! 0 vhigh
+ vin in 0 pulse vhigh 0 0 'rise' 'rise' 'period/2' 'period'
+ c out 0 5f
+
+ .subckt tsv in out
+ r0 in net1 0.17
+ l0 net1 out 4p
+ x0 in 0 sidewall_cap
+ x1 out 0 sidewall_cap
+ .ends
+
+ .subckt sidewall_cap tsv_node vss
+ cox tsv_node net2 38f
+ cdep net2 net3 30f
+ csi net3 vss 5f
+ rg net3 vss 1/4e-4
+ .ends
+
+ .subckt inv g1 input output v1 lt=130n wt=150n
+ mn0 output input g1 g1 nmos l=lt w=wt
+ mp0 output input v1 v1 pmos l=lt w=wt
+ .ends inv
+
+ x1 0 in net01 vdd! inv wt=inv_w_n
+ x2 net01 out tsv
+
+ .meas tran delay
+ +trig v(in) val='0.5*vhigh' rise=last
+ +targ v(out) val='0.5*vhigh' cross=last
+ .meas delay_out param='delay*1e12'
+
+ .trans 1p 10n
+ +sweep inv_w_n
+ **+150n 3000n 150n
+ **+50n 1000n 50n
+ **+40n 800n 40n
+ **+30n 600n 30n
+ +20n 400n 20n
+
+ .end
+
+ ***********************************************************************
+ ** runlvl is invoked, you can disable it by:
+      a) Add option runlvl=0 to your current simulation job.
+      b) Copy $installdir/hspice.ini to your HOME directory and
+         customize it by adding option runlvl=0, which disables
+         it for all of your simulation jobs.
+      c) Re-invoke $installdir/bin/config program and unselect the
+         option runlvl setting in box 'hspice.ini' which disables
+         it for whole group simulation jobs.
+
+ ** runlvl is invoked, some options are ignored or automatically set:
+      Options below are automatically set(user setting will overwrite them):
+      if runlvl=6,            .option bypass=0
+      if runlvl=[1|2|3|4|5],  .option bypass=2
+
+      Options below are ignored, they are replaced by automated algorithms:
+        lvltim    dvdt      ft    fast   trtol  absvar  relvar
+          relq  chgtol    dvtr    imin    itl3    rmax
+
+ ** runlvl is invoked, actual option value used by HSPICE are:
+       runlvl= 2       bypass= 2      mbypass=   2.00   bytol= 100.00u
+ ***********************************************************************
+
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **tsv                                                                          
+  ******  circuit name directory                                                
+ ******  
+ circuit number to circuit name directory
+   number circuitname                     definition         multiplier
+        0 main circuit
+        1 x1.                             inv                1.00 
+        2 x2.                             tsv                1.00 
+        3 x2.x0.                          sidewall_cap       1.00 
+        4 x2.x1.                          sidewall_cap       1.00 
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **tsv                                                                          
+  ******  mos   model parameters           tnom=  25.000 temp=  25.000          
+ ******  
+ 
+Model Name: nmos  
+
+ BSIM4 Model (Level 54)
+
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.2e-09 
+    TOXE = 1.2e-09 
+    TOXP =  9e-10 
+    TOXM = 1.2e-09 
+    DTOX =  3e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =    1.6 
+    XJ =  5e-09 
+    VSAT =  2e+05 
+    A0 =      1 
+    AGS =      0 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA =   0.04 
+    NSUB =  6e+16 
+    NDEP =  7e+18 
+    NSD =  2e+20 
+    NGATE =  1e+23 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =      0 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-11 
+    DVTP1 =    0.1 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 =      0 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =    0.5 
+    DSUB =    0.1 
+    VTH0 = 0.6819 
+    EU =   1.67 
+    UA =  6e-10 
+    UA1 = 4.31e-09 
+    UB = 1.2e-18 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 =  0.028 
+    UTE =   -1.5 
+    VOFF = -0.1014 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.01 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    170 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =     75 
+    RSW =     75 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 = 0.0095 
+    ETAB =      0 
+    PCLM =   0.02 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = -0.005 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 =  1e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL =      0 
+    XLREF =      0 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC = 0.01521 
+    BIGC = 0.002743 
+    CIGC =  0.002 
+    AIGSD = 0.01521 
+    BIGSD = 0.002743 
+    CIGSD =  0.002 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =  -0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.278e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC =      0 
+    DLCIG =      0 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO =  5e-11 
+    CGDO =  5e-11 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT =      0 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.25e+41 
+    NOIB = 3.125e+26 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+ 
+
+ 
+Model Name: pmos  
+
+ BSIM4 Model (Level 54)
+
+    MOBMOD = 0
+    BINUNIT = 1
+    PARAMCHK = 1
+    CAPMOD = 2
+    DIOMOD = 1
+    RDSMOD = 0
+    TRNQSMOD = 0
+    ACNQSMOD = 0
+    RBODYMOD = 1
+    RGATEMOD = 1
+    PERMOD = 1
+    GEOMOD = 1
+    RGEOMOD = 0
+    FNOIMOD = 1
+    TNOIMOD = 0
+    IGCMOD = 1
+    IGBMOD = 1
+    STIMOD = 0
+    VERSION =      4 
+    TOXREF = 1.22e-09 
+    TOXE = 1.22e-09 
+    TOXP =  9e-10 
+    TOXM = 1.22e-09 
+    DTOX = 3.2e-10 
+    EPSROX =    3.9 
+    CDSC =      0 
+    CDSCB =      0 
+    CDSCD =      0 
+    CIT =      0 
+    NFACTOR =    1.8 
+    XJ = 7.2e-09 
+    VSAT = 1.95e+05 
+    A0 =      1 
+    AGS =  1e-20 
+    A1 =      0 
+    A2 =      1 
+    AT = 3.3e+04 
+    KETA = -0.047 
+    NSUB =  6e+16 
+    NDEP = 4.4e+18 
+    NSD =  2e+20 
+    NGATE =  1e+23 
+    GAMMA1 =      0 
+    GAMMA2 =      0 
+    VBX =      0 
+    VBM =     -3 
+    XT = 1.55e-07 
+    K1 =    0.4 
+    KT1 =  -0.11 
+    KT1L =      0 
+    KT2 =  0.022 
+    K2 =  -0.01 
+    K3 =      0 
+    K3B =      0 
+    LPE0 =      0 
+    LPEB =      0 
+    DVTP0 =  1e-11 
+    DVTP1 =   0.05 
+    W0 = 2.5e-06 
+    DVT0 =      1 
+    DVT1 =      2 
+    DVT2 = -0.032 
+    DVT0W =      0 
+    DVT1W =      0 
+    DVT2W =      0 
+    DROUT =   0.56 
+    DSUB =    0.1 
+    VTH0 = -0.6862 
+    EU =      1 
+    UA =  2e-09 
+    UA1 = 4.31e-09 
+    UB =  5e-19 
+    UB1 = 7.61e-18 
+    UC =      0 
+    UC1 = -5.6e-11 
+    U0 = 0.0075 
+    UTE =   -1.5 
+    VOFF =  -0.08 
+    VOFFL =      0 
+    MINV =   0.05 
+    FPROUT =    0.2 
+    PDITS =   0.08 
+    PDITSD =   0.23 
+    PDITSL = 2.3e+06 
+    DELTA =   0.01 
+    RDSW =    220 
+    RDSWMIN =      0 
+    RDWMIN =      0 
+    RSWMIN =      0 
+    RDW =   72.5 
+    RSW =   72.5 
+    PRWG =      0 
+    PRWB =      0 
+    PRT =      0 
+    ETA0 = 0.0095 
+    ETAB =      0 
+    PCLM =   0.12 
+    PDIBLC1 =  0.001 
+    PDIBLC2 =  0.001 
+    PDIBLCB = 3.4e-08 
+    PSCBE1 = 8.14e+08 
+    PSCBE2 = 9.58e-07 
+    PVAG =  1e-20 
+    WR =      1 
+    DWG =      0 
+    DWB =      0 
+    XW =      0 
+    XWREF =      0 
+    XL =      0 
+    XLREF =      0 
+    B0 =      0 
+    B1 =      0 
+    ALPHA0 =  0.074 
+    ALPHA1 =  0.005 
+    AGIDL = 0.0002 
+    BGIDL = 2.1e+09 
+    CGIDL = 0.0002 
+    PHIN =      0 
+    EGIDL =    0.8 
+    AIGC = 0.0097 
+    BIGC = 0.00125 
+    CIGC = 0.0008 
+    AIGSD = 0.0115 
+    BIGSD = 0.00125 
+    CIGSD = 0.0008 
+    AIGBACC =  0.012 
+    BIGBACC = 0.0028 
+    CIGBACC =  0.002 
+    AIGBINV =  0.014 
+    BIGBINV =  0.004 
+    CIGBINV =  0.004 
+    NIGC =      1 
+    NIGBINV =      3 
+    NIGBACC =      1 
+    NTOX =      1 
+    EIGBINV =    1.1 
+    PIGCD =      1 
+    POXEDGE =      1 
+    XRCRG1 =     12 
+    TNOIA =    1.5 
+    TNOIB =    3.5 
+    NTNOI =      1 
+    XRCRG2 =      5 
+    BETA0 =     30 
+    IJTHDFWD =   0.01 
+    IJTHSFWD =   0.01 
+    IJTHDREV =  0.001 
+    IJTHSREV =  0.001 
+    XJBVD =      1 
+    XJBVS =      1 
+    BVD =     10 
+    BVS =     10 
+    VFB =   0.55 
+    GBMIN =  1e-10 
+    RBDB =     15 
+    RBPB =      5 
+    RBSB =     15 
+    RBPS =     15 
+    RBPD =     15 
+    CGSL = 2.653e-10 
+    CGDL = 2.653e-10 
+    CKAPPAS =   0.03 
+    CKAPPAD =   0.03 
+    CF = 1.274e-10 
+    CLC =  1e-07 
+    CLE =    0.6 
+    DWC =  5e-09 
+    DLC =  8e-10 
+    DLCIG =  8e-10 
+    DWJ =      0 
+    VFBCV =     -1 
+    ACDE =      1 
+    MOIN =     15 
+    NOFF =    0.9 
+    VOFFCV =   0.02 
+    DMCG =      0 
+    DMCI =      0 
+    DMDG =      0 
+    DMCGT =      0 
+    XGW =      0 
+    XGL =      0 
+    RSHG =    0.4 
+    NGCON =      1 
+    TCJ =  0.001 
+    TPB =  0.005 
+    TCJSW =  0.001 
+    TPBSW =  0.005 
+    TCJSWG =  0.001 
+    TPBSWG =  0.005 
+    SK0 =      0 
+    SK1 =      0 
+    SK2 =      0 
+    SL =  2e-06 
+    SW =  2e-06 
+    K =      0 
+    TNOM =  300.1 
+    CGSO =  5e-11 
+    CGDO =  5e-11 
+    CGBO = 2.56e-11 
+    XPART =      0 
+    RSH =      5 
+    JSS = 0.0001 
+    JSWS =  1e-11 
+    JSWGS =  1e-10 
+    PBS =      1 
+    MJS =    0.5 
+    PBSWS =      1 
+    MJSWS =   0.33 
+    CJS = 0.0005 
+    CJSWS =  5e-10 
+    NJS =      1 
+    PBSWGS =      1 
+    MJSWGS =   0.33 
+    CJSWGS =  3e-10 
+    XTIS =      3 
+    JSD = 0.0001 
+    JSWD =  1e-11 
+    JSWGD =  1e-10 
+    PBD =      1 
+    MJD =    0.5 
+    PBSWD =      1 
+    MJSWD =   0.33 
+    CJD = 0.0005 
+    CJSWD =  5e-10 
+    NJD =      1 
+    PBSWGD =      1 
+    MJSWGD =   0.33 
+    CJSWGD =  5e-10 
+    XTID =      3 
+    LMLT =      1 
+    WMLT =      1 
+    LINT =  8e-10 
+    LL =      0 
+    LLC =      0 
+    LLN =      1 
+    LW =      0 
+    LWC =      0 
+    LWN =      1 
+    LWL =      0 
+    LWLC =      0 
+    LMIN =      0 
+    LMAX =      1 
+    WINT =  5e-09 
+    WL =      0 
+    WLC =      0 
+    WLN =      1 
+    WW =      0 
+    WWC =      0 
+    WWN =      1 
+    WWL =      0 
+    WWLC =      0 
+    WMIN =      0 
+    WMAX =      1 
+    NOIA = 6.188e+40 
+    NOIB = 1.5e+25 
+    NOIC = 8.75e+09 
+    EM = 4.1e+07 
+    EF =      1 
+    AF =      1 
+    KF =      0 
+    TRS =      0 
+    TRD =      0 
+ 
+
+
+ **warning** dc voltage reset to initial transient source value
+             in source        0:vin                 new dc=  0.9000D+00
+
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.5e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.5e-07 l=1.6e-08.
+
+ 
+
+
+
+ **warning**  no dc path to ground from node        3:net2             defined in subckt sidewall_cap    now it is connected with gdcpath
+
+
+
+
+
+      
+  Opening plot unit= 15
+ file=TSV_simplified.pa0                                                       
+
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model nmos with w=2e-08 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model pmos with w=2e-08 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.000E-08 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=4e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model nmos with w=4e-08 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=4e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model pmos with w=4e-08 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    4.000E-08 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=6e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model nmos with w=6e-08 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=6e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model pmos with w=6e-08 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    6.000E-08 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=8e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model nmos with w=8e-08 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=8e-08 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model pmos with w=8e-08 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    8.000E-08 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1e-07 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model nmos with w=1e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1e-07 l=1.6e-08.
+
+ Warning: (B1 + Weff) may be too small in BSIM4 model pmos with w=1e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    1.000E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.2e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.2e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    1.200E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay= -9.5150E-09  targ=  0.0000E+00   trig=  9.5150E-09
+   delay_out= -9.5150E+03
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.4e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.4e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    1.400E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  2.6241E-11  targ=  9.5412E-09   trig=  9.5150E-09
+   delay_out=  2.6241E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.6e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.6e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    1.600E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  4.6119E-11  targ=  9.5611E-09   trig=  9.5150E-09
+   delay_out=  4.6119E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.8e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.8e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    1.800E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  6.0284E-11  targ=  9.5753E-09   trig=  9.5150E-09
+   delay_out=  6.0284E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.000E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  6.8774E-11  targ=  9.5838E-09   trig=  9.5150E-09
+   delay_out=  6.8774E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2.2e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2.2e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.200E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  7.7406E-11  targ=  9.5924E-09   trig=  9.5150E-09
+   delay_out=  7.7406E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2.4e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2.4e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.400E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.1925E-11  targ=  9.5969E-09   trig=  9.5150E-09
+   delay_out=  8.1925E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2.6e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2.6e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.600E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.2382E-11  targ=  9.5974E-09   trig=  9.5150E-09
+   delay_out=  8.2382E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=2.8e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=2.8e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    2.800E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.5409E-11  targ=  9.6004E-09   trig=  9.5150E-09
+   delay_out=  8.5409E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=3e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=3e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    3.000E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.4943E-11  targ=  9.5999E-09   trig=  9.5150E-09
+   delay_out=  8.4943E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=3.2e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=3.2e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    3.200E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.5748E-11  targ=  9.6007E-09   trig=  9.5150E-09
+   delay_out=  8.5748E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=3.4e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=3.4e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    3.400E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.4656E-11  targ=  9.5997E-09   trig=  9.5150E-09
+   delay_out=  8.4656E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=3.6e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=3.6e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    3.600E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.3623E-11  targ=  9.5986E-09   trig=  9.5150E-09
+   delay_out=  8.3623E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=3.8e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=3.8e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    3.800E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.2208E-11  targ=  9.5972E-09   trig=  9.5150E-09
+   delay_out=  8.2208E+01
+
+          ***** job concluded
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=4e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=4e-07 l=1.6e-08.
+
+
+   *** parameter inv_w_n          =    4.000E-07 ***
+
+ ******  
+ **tsv                                                                          
+  ******  transient analysis               tnom=  25.000 temp=  25.000          
+ ******  
+   delay=  8.0715E-11  targ=  9.5957E-09   trig=  9.5150E-09
+   delay_out=  8.0715E+01
+ Warning:  Acde = 1 may be too small in BSIM4 model nmos with w=1.5e-07 l=1.6e-08.
+
+ Warning:  Acde = 1 may be too small in BSIM4 model pmos with w=1.5e-07 l=1.6e-08.
+
+
+   meas_variable = delay           
+   mean  =-2.803e-09      varian = 2.032e-17    
+   sigma = 4.508e-09      avgdev = 4.027e-09    
+   max   = 8.575e-11      min    =-9.515e-09    
+    1-sigma = 4.508e-09     median = 7.309e-11    
+
+   meas_variable = delay_out       
+   mean  =-2.803e+03      varian = 2.032e+07    
+   sigma = 4.508e+03      avgdev = 4.027e+03    
+   max   = 8.574e+01      min    =-9.515e+03    
+    1-sigma = 4.508e+03     median = 7.309e+01    
+ 
+
+          ***** job concluded
+1****** HSPICE -- A-2008.03 32-BIT (Feb 26 2008) linux ******                   
+ ******  
+ **tsv                                                                          
+  ******  job statistics summary           tnom=  25.000 temp=  25.000          
+ ******  
+
+           total memory used        165 kbytes
+
+  # nodes =      18 # elements=      15
+  # diodes=       0 # bjts    =       0 # jfets   =       0 # mosfets =       2
+  # va device =       0
+
+    analysis           time    # points   tot. iter  conv.iter
+
+    op point           0.01           1         160
+    transient          0.44      200020       13863        6324 rev=       568
+    readin             0.01
+    errchk             0.00
+    setup              0.00
+    output             0.00
+           total cpu time          0.46 seconds
+           total elapsed time         1 seconds
+               job started at  17:27:21 09/26/2011
+               job ended   at  17:27:22 09/26/2011
+
+
+ Init: hspice initialization file: /home/software/synopsys-2008/hspice/hspice/hspice.ini
+ lic: Release hspice token(s) 

@@ -1,0 +1,22 @@
+* "simulator" "HSPICE" 
+* "version" "A-2008.03 32-BIT"
+* "format" "HSP"
+* "rundate" "17:27:21 09/26/2011 "
+* "netlist" "TSV_simplified.sp "
+* "runtitle" "**tsv"
+* time =    0.            
+* temperature =  2.500e+01       
+*** BEGIN: Saved Operating Point ***                     
+.option 
++ gmindc= 1.000e-12       
+.nodeset
++ in = 9.000e-01       
++ net01 = 9.134e-07       
++ out = 9.134e-07       
++ vdd! = 9.000e-01       
++ x2.net1 = 9.134e-07       
++ x2.x0.net2 =   0.            
++ x2.x0.net3 =   0.            
++ x2.x1.net2 =   0.            
++ x2.x1.net3 =   0.            
+***   END: Saved Operating Point ***                     
