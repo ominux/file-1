@@ -1,0 +1,12 @@
+### SPICE Explorer log file, revision b2008.09-SP1 (build 0812) ###
+### created at 14:38:55 on Mon Sep 26 2011 (Linux) ###
+# (0) running in waveview only mode
+# (0) SW_SX_PERL_LIB defined
+# (0) SW_SX_TCL_LIB defined
+# (0) HOME defined
+# (0) #X: auto-repeat defaulted to on
+# (0) #X: running on truecolor display ...
+# (0) #X: TBAR LOADWDF
+sx_open_sim_file_read "/home/mdl/jzx105/hspice/TSV/TSV_simplified.tr0"
+sx_log "disp_sig 1 A P=null file=0 S='' W='v(in)'' "
+sx_log "disp_sig 1 A P=0 file=0 S='' W='v(net01)'' "
